@@ -1,0 +1,7 @@
+
+target/ 
+.settings/
+src/main/java/com/projeto/estrutura/imagens/
+
+.classpath
+.project
