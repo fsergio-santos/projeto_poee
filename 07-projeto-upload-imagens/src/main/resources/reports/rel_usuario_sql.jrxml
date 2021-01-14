@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.14.0.final using JasperReports Library version 6.14.0-2ab0d8625be255bf609c78e1181801213e51db8f  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rel_usuario_sql" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="417d3257-474c-4872-b92b-3204663df7b2">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MYSQL_CONNECTION"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT projeto_pooe.tab_usuario.`USUARIO_ID`,
+	projeto_pooe.tab_usuario.`USUARIO_EMAIL`,
+	projeto_pooe.tab_usuario.`USUARIO_USERNAME`
+FROM projeto_pooe.tab_usuario]]>
+	</queryString>
+	<field name="USUARIO_ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="USUARIO_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="USUARIO_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tab_usuario"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="USUARIO_EMAIL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="USUARIO_EMAIL"/>
+		<property name="com.jaspersoft.studio.field.label" value="USUARIO_EMAIL"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tab_usuario"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="USUARIO_USERNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="USUARIO_USERNAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="USUARIO_USERNAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tab_usuario"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="38" uuid="8809fea3-81ee-4118-80d3-2a1f664ce6fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Usuários]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="30" uuid="2683b2d0-a345-45b7-b2d2-1e59ca74ad7a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9247c7a1-d1d3-442d-ac83-4cfe03d3e3bd"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="30" uuid="26723993-c1e8-4466-93ff-d59eed0dbdd4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a66b42f9-29f6-4e54-9cff-3c1f7fc85ed3"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="30" uuid="4723db16-e1d5-47a4-9bca-d460709aad0d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bff7a3b6-7320-49ad-b597-f04fd0b1c4f2"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="23" uuid="67108273-055c-4575-809e-2105874f4390">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9247c7a1-d1d3-442d-ac83-4cfe03d3e3bd"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{USUARIO_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="23" uuid="b2dab18f-0540-4e9c-93cb-4b7c9ab9d960">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a66b42f9-29f6-4e54-9cff-3c1f7fc85ed3"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{USUARIO_EMAIL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="23" uuid="613439db-93a1-4fff-979d-6dfb654e0631">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bff7a3b6-7320-49ad-b597-f04fd0b1c4f2"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{USUARIO_USERNAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
